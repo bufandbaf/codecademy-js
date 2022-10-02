@@ -1,1 +1,1 @@
-# codecadamy-js
+# codecademy-js
