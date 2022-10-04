@@ -13,13 +13,13 @@ const menu = {
   },
   get todaysSpecial() {
     if (this._meal && this._price) {
-      return `Today/s Special is Spaghetti for $${this.price}`;
+      return `Today/s Special is Spaghetti for $${this._price}`;
     } else {
-      return `$${this.meal} or price was not set correctly!`;
+      return `$${this._meal} or price was not set correctly!`;
     }
   },
 };
 
-menu.meal = "chicken";
+menu.meal = "string";
 menu.price = 5;
 console.log(menu.todaysSpecial);
