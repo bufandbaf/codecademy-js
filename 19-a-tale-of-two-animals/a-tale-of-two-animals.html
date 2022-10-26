@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans"
+      rel="stylesheet"
+    />
+    <title>Form a Story</title>
+  </head>
+  <body>
+    <section id="top">
+      <img
+        src="https://content.codecademy.com/courses/learn-html-forms/formAStoryLogo.svg"
+        alt="Form A Story Logo"
+      />
+    </section>
+
+    <section id="main">
+      <h1>
+        Complete the Form -<br />
+        Complete the Story!
+      </h1>
+      <hr />
+      <!--Add your form below:-->
+      <form action="story.html" method="GET">
+        <label for="animal-1">Animal:</label>
+        <input id="animal-1" type="text" name="animal-1" required />
+        <br />
+        <br />
+        <label for="animal-2">Another Animal:</label>
+        <input id="animal-2" type="text" name="animal-2" required />
+        <br />
+        <br />
+        <label for="animal-3">The Animal that will serve as a Judge:</label>
+        <input id="animal-3" type="text" name="animal-3" required />
+        <br />
+        <br />
+        <label for="adj-1">Adjective (in past tense):</label>
+        <input id="adj-1" type="text" name="adj-1" required />
+        <br />
+        <br />
+        <label for="verb-1">Verb (in -ing):</label>
+        <input id="verb-1" type="text" name="verb-1" required />
+        <br />
+        <br />
+        <label for="num-1">Number:</label>
+        <input id="num-1" type="number" name="num-1" required />
+        <br />
+        <br />
+        <label for="quote"
+          >Motivational Quote (pick one or type your own):</label
+        >
+        <input
+          id="quote"
+          type="text"
+          name="quote"
+          list="quote-choices"
+          required
+        />
+        <br />
+        <br />
+        <datalist id="quote-choices">
+          <option value="Winner gets ice cream!"></option>
+          <option value="On your marks!"></option>
+          <option value="Owl for President!"></option>
+        </datalist>
+        <label for="speed">Adverb:</label>
+        <select name="speed" id="speed" required>
+          <option value="faster">Faster</option>
+          <option value="slower">Slower</option>
+          <option value="better">Better</option>
+          <option value="smarter">Smarter</option>
+          <option value="yesterday">Yesterday</option>
+        </select>
+        <br />
+        <br />
+        <span>Answer for the mocking question (choose one only):</span>
+        <br />
+        <input
+          id="this might be surprising to you"
+          type="radio"
+          name="answer"
+          value="this might be surprising to you"
+          required
+        />
+        <label for="this might be surprising to you"
+          >This might be surprising to you</label
+        >
+        <br />
+        <input
+          id="not that it's any of your business"
+          type="radio"
+          name="answer"
+          value="not that it's any of your business"
+          required
+        />
+        <label for="not that it's any of your business"
+          >Not that it's any of your business</label
+        >
+        <br />
+        <br />
+        <label for="message">Meaningful Message:</label>
+        <br /><textarea
+          id="message"
+          name="message"
+          rows="8"
+          cols="40"
+          required
+        ></textarea>
+        <br />
+        <input type="submit" value="Form My Story!" />
+      </form>
+    </section>
+  </body>
+</html>
