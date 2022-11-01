@@ -1,0 +1,19 @@
+* {
+  border: 1px solid red;
+}
+
+p {
+  color: green;
+}
+
+h1 {
+  color: maroon;
+}
+
+.title {
+  color: teal;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
