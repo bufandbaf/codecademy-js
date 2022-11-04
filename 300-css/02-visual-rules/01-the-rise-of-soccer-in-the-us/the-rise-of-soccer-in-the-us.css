@@ -94,3 +94,8 @@ p {
 p {
   font-weight: bold;
 }
+
+/* Text Align */
+h1 {
+  text-align: center;
+}
