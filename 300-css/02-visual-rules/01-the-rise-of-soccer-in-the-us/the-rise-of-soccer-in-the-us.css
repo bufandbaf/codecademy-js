@@ -89,3 +89,8 @@ p {
 p {
   font-size: 18px;
 }
+
+/* Font Weight */
+p {
+  font-weight: bold;
+}
