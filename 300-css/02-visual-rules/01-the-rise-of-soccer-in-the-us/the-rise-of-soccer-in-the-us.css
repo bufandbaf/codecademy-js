@@ -115,3 +115,8 @@ h1 {
 .image {
   background-image: url("https://content.codecademy.com/courses/freelance-1/unit-2/soccer.jpeg");
 }
+
+/* Important */
+h1 {
+  color: #fff !important;
+}
