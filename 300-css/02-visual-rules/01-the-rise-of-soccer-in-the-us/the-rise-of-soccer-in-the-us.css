@@ -99,3 +99,9 @@ p {
 h1 {
   text-align: center;
 }
+
+/* Color and Background Color */
+.caption {
+  background-color: white;
+  color: black;
+}
