@@ -110,3 +110,8 @@ h1 {
 .caption {
   opacity: 0.75;
 }
+
+/* Background Image */
+.image {
+  background-image: url("https://content.codecademy.com/courses/freelance-1/unit-2/soccer.jpeg");
+}
