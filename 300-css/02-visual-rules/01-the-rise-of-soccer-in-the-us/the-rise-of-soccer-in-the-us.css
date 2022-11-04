@@ -105,3 +105,8 @@ h1 {
   background-color: white;
   color: black;
 }
+
+/* Opacity */
+.caption {
+  opacity: 0.75;
+}
