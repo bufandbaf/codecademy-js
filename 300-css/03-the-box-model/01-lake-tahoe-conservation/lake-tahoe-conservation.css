@@ -12,6 +12,7 @@ body {
 .navigation li {
   font-weight: 100;
   letter-spacing: 2px;
+  padding: 20px;
 }
 
 .navigation li.logo {
@@ -57,6 +58,10 @@ h2 {
   line-height: 48px;
   text-align: center;
   border: 1px dotted red;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
 h3 {
@@ -99,6 +104,7 @@ p {
   color: white;
   display: inline-block;
   text-decoration: none;
+  padding: 14px;
 }
 
 .share a:hover {
