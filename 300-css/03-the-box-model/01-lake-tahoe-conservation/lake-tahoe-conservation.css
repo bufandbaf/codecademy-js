@@ -58,10 +58,11 @@ h2 {
   line-height: 48px;
   text-align: center;
   border: 1px dotted red;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-left: 30px;
+  padding: 20px 30px;
+  /*padding-top: 20px;
   padding-right: 30px;
+  padding-bottom: 20px;
+  padding-left: 30px;*/
 }
 
 h3 {
@@ -75,6 +76,7 @@ p {
   color: grey;
   font-size: 16px;
   line-height: 48px;
+  padding: 10px 20px;
 }
 
 .pull-quote {
