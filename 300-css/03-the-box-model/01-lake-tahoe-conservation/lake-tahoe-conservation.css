@@ -44,6 +44,8 @@ body {
   text-align: center;
   width: 400px;
   margin: 0 auto;
+  height: 1000px;
+  overflow: scroll;
 }
 
 h1 {
