@@ -87,6 +87,10 @@ nav a {
   color: #05a8aa;
   display: block;
   font-weight: 700;
+  width: 200px;
+  padding: 20px;
+  margin: 40px auto;
+  border: 1px solid blue;
 }
 
 .button:hover {
