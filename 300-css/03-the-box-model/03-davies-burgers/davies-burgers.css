@@ -19,6 +19,8 @@ nav {
 
 nav img {
   display: block;
+  width: 180px;
+  margin: 0 auto;
 }
 
 nav span {
