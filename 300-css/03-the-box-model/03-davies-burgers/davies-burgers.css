@@ -50,6 +50,7 @@ nav a {
   background-image: url("https://content.codecademy.com/courses/web-101/unit-6/htmlcss1-img_burgerphoto.jpeg");
   background-position: center;
   background-size: cover;
+  height: 320px;
 }
 
 .header h1 {
@@ -60,6 +61,8 @@ nav a {
   font-weight: 300;
   line-height: 40px;
   width: 68%;
+  padding: 20px;
+  margin: 0 auto;
 }
 
 /* Content Body */
