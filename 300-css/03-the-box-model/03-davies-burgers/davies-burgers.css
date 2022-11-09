@@ -102,12 +102,16 @@ nav a {
 /* Content Nutrition */
 
 ul.nutrition {
+  padding: 20px;
 }
 
 ul.nutrition li {
   display: inline-block;
   background-color: #05a8aa;
   list-style: none;
+  width: 200px;
+  padding: 10px 20px;
+  margin-bottom: 3px;
 }
 
 .nutrition .category {
