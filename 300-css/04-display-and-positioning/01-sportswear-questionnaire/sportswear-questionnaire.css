@@ -6,6 +6,8 @@ body {
 header {
   background-color: #466995;
   border-bottom: 1px solid #466995;
+  position: absolute;
+  width: 100%;
 }
 
 ul {
@@ -83,9 +85,12 @@ footer {
 
 .question {
   text-align: center;
-  /*position: static;*/
+  /*
+  position: static;
+
   position: relative;
   top: 40px;
+  */
 }
 
 .answer {
