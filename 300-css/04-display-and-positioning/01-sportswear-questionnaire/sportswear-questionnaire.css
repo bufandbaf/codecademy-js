@@ -90,6 +90,7 @@ footer {
 
 .question {
   text-align: center;
+  position: static;
   /*
   position: static;
 
