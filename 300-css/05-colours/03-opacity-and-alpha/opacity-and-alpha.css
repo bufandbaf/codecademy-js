@@ -24,13 +24,13 @@ body {
 }
 
 body {
-  background-color: hsl(240, 100%, 80%);
+  background-color: rgba(0, 255, 0, 0.1);
 }
 
 .midground {
-  background-color: hsl(225, 100%, 25%);
+  background-color: hsla(225, 100%, 25%, 0.4);
 }
 
 .foreground {
-  background-color: hsl(325, 50%, 50%);
+  background-color: hsla(325, 50%, 50%, 0.6);
 }
