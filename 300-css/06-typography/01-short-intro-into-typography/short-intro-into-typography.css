@@ -88,6 +88,7 @@ a.home {
 .font-card .creator {
   padding: 10px 20px;
   font-size: 16px;
+  font-style: italic;
 }
 
 .sample {
