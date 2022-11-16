@@ -41,6 +41,7 @@ p {
   padding: 20px 0;
   background-color: #fff;
   font-size: 14px;
+  font-weight: 900;
 }
 
 .header li {
@@ -67,6 +68,7 @@ a.home {
   border-top: 1px solid #fff;
   border-bottom: 1px solid #fff;
   color: #ffffff;
+  font-weight: lighter;
 }
 
 /* Editorial Sections */
