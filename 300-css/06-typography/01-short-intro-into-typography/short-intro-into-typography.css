@@ -1,4 +1,11 @@
 /* Universal Styles */
+@font-face {
+  font-family: "GlegooBanner";
+  src: url("../fonts/Glegoo-Regular.woff2") format("woff2"),
+    url("../fonts/Glegoo-Regular.woff") format("woff"),
+    url("../fonts/Glegoo-Regular.ttf") format("truetype");
+}
+
 html {
   font-size: 16px;
   font-family: "Arial", sans-serif;
@@ -74,6 +81,8 @@ a.home {
   font-weight: lighter;
   word-spacing: 0.25em;
   line-height: 1.4;
+  font-family: "GlegooBanner";
+  font-size: 20px;
 }
 
 /* Editorial Sections */
