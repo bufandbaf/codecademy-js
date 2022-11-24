@@ -26,6 +26,7 @@ html {
   box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.05);
   font-family: Verdana, sans-serif;
   font-size: 0.77rem;
+  font-weight: bold;
 }
 
 .header .logo {
