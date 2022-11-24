@@ -74,11 +74,13 @@ html {
   border-bottom: 4px solid #ffb78c;
   font-size: 1.44rem;
   letter-spacing: 2px;
+  font-weight: 500;
 }
 
 .banner h1 {
   padding-top: 1.11rem;
   font-size: 11rem;
+  font-weight: 900;
 }
 
 @media only screen and (max-width: 750px) {
