@@ -19,7 +19,7 @@ function determineCulprit(){
     return Math.floor(Math.random()*2+1);
   }
 
-function crimeSceneContent(numberofClues:number, clue1:string, clue2:string, suspect1:string, suspect2:string){
+function crimeSceneContent(_numberofClues:number, clue1:string, clue2:string, suspect1:string, suspect2:string){
     console.log('Now I consider the first clue: ',clue1);
     console.log('Now I consider the second clue: ',clue2);
 
