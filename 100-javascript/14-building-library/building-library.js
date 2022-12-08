@@ -26,7 +26,13 @@ class Media {
     return ratingsSum / this.ratings.length;
   }
   addRating(value) {
-    this.ratings.push(value);
+    if (value < 1 || value > 5) {
+      console.log(
+        "ERROR! Rating can only be expressed in numbers between 1 and 5."
+      );
+    } else {
+      this.ratings.push(value);
+    }
   }
 }
 
