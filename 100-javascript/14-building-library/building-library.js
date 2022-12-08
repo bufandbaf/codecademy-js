@@ -85,6 +85,19 @@ class CD extends Media {
   get songs() {
     return this._songs;
   }
+  shuffle() {
+    let shuffledSongs = [];
+    for (let i = 0; i < this.songs.length; i++) {
+      let randomIndex = Math.floor(math.random() * this.songs.length);
+      let randomSong = this.songs[randomIndex];
+      if (shuffledSongs.includes(randomSong)) {
+        i--;
+      } else {
+        shuffledSongs[i] = randomSong;
+      }
+    }
+    return shuffledSongs;
+  }
 }
 
 const historyOfEverything = new Book(
