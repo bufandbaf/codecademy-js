@@ -88,7 +88,7 @@ class CD extends Media {
   shuffle() {
     let shuffledSongs = [];
     for (let i = 0; i < this.songs.length; i++) {
-      let randomIndex = Math.floor(math.random() * this.songs.length);
+      let randomIndex = Math.floor(Math.random() * this.songs.length);
       let randomSong = this.songs[randomIndex];
       if (shuffledSongs.includes(randomSong)) {
         i--;
