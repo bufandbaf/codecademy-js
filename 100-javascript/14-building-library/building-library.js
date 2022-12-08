@@ -55,10 +55,11 @@ class Book extends Media {
 }
 
 class Movie extends Media {
-  constructor(director, title, runTime) {
+  constructor(director, title, runTime, mainStar) {
     super(title);
     this._director = director;
     this._runTime = runTime;
+    this._mainStar = mainStar;
   }
   get director() {
     return this._director;
@@ -66,28 +67,10 @@ class Movie extends Media {
   get runTime() {
     return this._runTime;
   }
+  get mainStar() {
+    return this._mainStar;
+  }
 }
-
-const historyOfEverything = new Book(
-  "Bill Bryson",
-  "A Short History of Nearly Everything",
-  "popular science",
-  544
-);
-historyOfEverything.toggleCheckOutStatus();
-console.log(historyOfEverything.isCheckedOut);
-historyOfEverything.addRating(4);
-historyOfEverything.addRating(5);
-historyOfEverything.addRating(5);
-console.log(historyOfEverything.getAverageRating());
-
-const speed = new Movie("Jan de Bont", "Speed", 116);
-speed.toggleCheckOutStatus();
-console.log(speed.isCheckedOut);
-speed.addRating(1);
-speed.addRating(1);
-speed.addRating(5);
-console.log(speed.getAverageRating());
 
 class CD extends Media {
   constructor(artist, title, songs) {
@@ -102,3 +85,25 @@ class CD extends Media {
     return this._songs;
   }
 }
+
+const historyOfEverything = new Book(
+  "Bill Bryson",
+  "A Short History of Nearly Everything",
+  "popular science",
+  544
+);
+
+historyOfEverything.toggleCheckOutStatus();
+console.log(historyOfEverything.isCheckedOut);
+historyOfEverything.addRating(4);
+historyOfEverything.addRating(5);
+historyOfEverything.addRating(5);
+console.log(historyOfEverything.getAverageRating());
+
+const speed = new Movie("Jan de Bont", "Speed", 116, "Sandra Bullock");
+speed.toggleCheckOutStatus();
+console.log(speed.isCheckedOut);
+speed.addRating(1);
+speed.addRating(1);
+speed.addRating(5);
+console.log(speed.getAverageRating());
