@@ -37,16 +37,20 @@ class Media {
 }
 
 class Book extends Media {
-  constructor(author, title, pages) {
+  constructor(author, title, pages, bookGenre) {
     super(title);
     this._author = author;
     this._pages = pages;
+    this._bookGenre = bookGenre;
   }
   get author() {
     return this._author;
   }
   get pages() {
     return this._pages;
+  }
+  get bookGenre() {
+    return this._bookGenre;
   }
 }
 
@@ -67,6 +71,7 @@ class Movie extends Media {
 const historyOfEverything = new Book(
   "Bill Bryson",
   "A Short History of Nearly Everything",
+  "popular science",
   544
 );
 historyOfEverything.toggleCheckOutStatus();
