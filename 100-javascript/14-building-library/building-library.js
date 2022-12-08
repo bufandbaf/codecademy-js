@@ -73,10 +73,11 @@ class Movie extends Media {
 }
 
 class CD extends Media {
-  constructor(artist, title, songs) {
+  constructor(artist, title, songs, yearPublished) {
     super(title);
     this._artist = artist;
-    this._songs = [""];
+    this._songs = songs;
+    this._yearPublished = yearPublished;
   }
   get artist() {
     return this._artist;
@@ -107,3 +108,16 @@ speed.addRating(1);
 speed.addRating(1);
 speed.addRating(5);
 console.log(speed.getAverageRating());
+
+const loveRevolution = new CD(
+  "Lenny Kravitz",
+  "Love Revolution",
+  ["American Woman", "I Belong to You", "Are You Gonna Go My Way?"],
+  2008
+);
+loveRevolution.toggleCheckOutStatus();
+console.log(loveRevolution.isCheckedOut);
+loveRevolution.addRating(5);
+loveRevolution.addRating(4);
+loveRevolution.addRating(3);
+console.log(loveRevolution.getAverageRating());
