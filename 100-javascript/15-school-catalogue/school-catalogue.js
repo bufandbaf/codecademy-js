@@ -31,3 +31,24 @@ class School {
     substituteTeachers[Index];
   }
 }
+
+class PrimarySchool extends School {
+  constructor(name, numberOfStudents, pickupPolicy) {
+    super(name, "primary", numberOfStudents);
+    this._pickupPolicy = pickupPolicy;
+  }
+  get pickupPolicy() {
+    return this._pickupPolicy;
+  }
+}
+
+class HighSchool extends School {
+  constructor(name, numberOfStudents, sportsTeams) {
+    super(name, "high", numberOfStudents);
+    this._sportsTeams = [""];
+  }
+  get sportsTeams() {
+    console.log(this._sportsTeams);
+    return this._sportsTeams;
+  }
+}
