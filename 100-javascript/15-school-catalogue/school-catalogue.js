@@ -33,36 +33,49 @@ class School {
 }
 
 class PrimarySchool extends School {
-  constructor(name, numberOfStudents, pickupPolicy) {
+  constructor(name, numberOfStudents, pickupPolicy, averagePrimaryTestScores) {
     super(name, "primary", numberOfStudents);
     this._pickupPolicy = pickupPolicy;
+    this._averagePrimaryTestScores = averagePrimaryTestScores;
   }
   get pickupPolicy() {
     return this._pickupPolicy;
   }
+  get averagePrimaryTestScores() {
+    return this._averagePrimaryTestScores;
+  }
 }
 
 class HighSchool extends School {
-  constructor(name, numberOfStudents, sportsTeams) {
+  constructor(name, numberOfStudents, sportsTeams, averageHighTestScores) {
     super(name, "high", numberOfStudents);
     this._sportsTeams = [""];
+    this._averageHighTestScores = averageHighTestScores;
   }
   get sportsTeams() {
     console.log(this._sportsTeams);
     return this._sportsTeams;
   }
+  get averageHighTestScores() {
+    return this._averageHighTestScores;
+  }
 }
 
 class MiddleSchool extends School {
-  constructor(name, numberOfStudents) {
+  constructor(name, numberOfStudents, averageMiddleTestScores) {
     super(name, "middle", numberOfStudents);
+    this._averageMiddleTestScores = averageMiddleTestScores;
+  }
+  get averageMiddleTestScores() {
+    return this._averageMiddleTestScores;
   }
 }
 
 const lorraineHansbury = new PrimarySchool(
   "Lorraine Hansbury",
   514,
-  "Students must be picked up by a parent, guardian, or a family member over the age of 13."
+  "Students must be picked up by a parent, guardian, or a family member over the age of 13.",
+  99
 );
 lorraineHansbury.quickFacts();
 School.pickSubstituteTeacher([
@@ -74,7 +87,10 @@ School.pickSubstituteTeacher([
   "Manu Ginobli",
 ]);
 
-const alSmith = new HighSchool("Al E. Smith", 415, [
-  "Baseball', 'Basketball', 'Volleyball', 'Track and Field",
-]);
+const alSmith = new HighSchool(
+  "Al E. Smith",
+  415,
+  ["Baseball', 'Basketball', 'Volleyball', 'Track and Field"],
+  96
+);
 alSmith.sportsTeams();
