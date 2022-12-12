@@ -100,6 +100,20 @@ class CD extends Media {
   }
 }
 
+class Catalog {
+  constructor(mediaList) {
+    this._MyCatalog = [mediaList];
+  }
+
+  get mediaList() {
+    return this._mediaList;
+  }
+
+  set mediaList(newMedialist) {
+    this._MyCatalog.push(newMedialist);
+  }
+}
+
 const historyOfEverything = new Book(
   "Bill Bryson",
   "A Short History of Nearly Everything",
