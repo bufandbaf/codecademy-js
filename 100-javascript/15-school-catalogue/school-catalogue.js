@@ -53,6 +53,12 @@ class HighSchool extends School {
   }
 }
 
+class MiddleSchool extends School {
+  constructor(name, numberOfStudents) {
+    super(name, "middle", numberOfStudents);
+  }
+}
+
 const lorraineHansbury = new PrimarySchool(
   "Lorraine Hansbury",
   514,
