@@ -26,9 +26,8 @@ class School {
     );
   }
   static pickSubstituteTeacher(substituteTeachers) {
-    this._substituteTeachers = [""];
-    const Index = Math.floor(substituteTeachers.length * Math.random());
-    substituteTeachers[Index];
+    const index = Math.floor(Math.random() * substituteTeachers.length);
+    return substituteTeachers[index];
   }
 }
 
@@ -49,11 +48,10 @@ class PrimarySchool extends School {
 class HighSchool extends School {
   constructor(name, numberOfStudents, sportsTeams, averageHighTestScores) {
     super(name, "high", numberOfStudents);
-    this._sportsTeams = [""];
+    this._sportsTeams = sportsTeams;
     this._averageHighTestScores = averageHighTestScores;
   }
   get sportsTeams() {
-    console.log(this._sportsTeams);
     return this._sportsTeams;
   }
   get averageHighTestScores() {
@@ -71,17 +69,16 @@ class MiddleSchool extends School {
   }
 }
 
-class SchoolCatalog {
-  constructor(schoolList) {
-    this._schoolList = [schoolList];
+class SchoolCatalogue {
+  constructor() {
+    this.schools = [];
   }
-
-  get schoolList() {
-    return this._schoolList;
-  }
-
-  set schoolList(newSchoolList) {
-    this._schoolList.push(newSchoolList);
+  add(school) {
+    if (school instanceof School) {
+      this.schools.push(school);
+    } else {
+      console.log(`Invalid input: ${school} is not a School instance.`);
+    }
   }
 }
 
@@ -92,7 +89,8 @@ const lorraineHansbury = new PrimarySchool(
   99
 );
 lorraineHansbury.quickFacts();
-School.pickSubstituteTeacher([
+
+const substituteTeacherList = School.pickSubstituteTeacher([
   "Jamal Crawford",
   "Lou Williams",
   "J. R. Smith",
@@ -107,4 +105,8 @@ const alSmith = new HighSchool(
   ["Baseball', 'Basketball', 'Volleyball', 'Track and Field"],
   96
 );
-alSmith.sportsTeams();
+console.log(alSmith.sportsTeams);
+
+const schoolCatalogue = new SchoolCatalogue();
+schoolCatalogue.add(lorraineHansbury);
+schoolCatalogue.add(alSmith);
