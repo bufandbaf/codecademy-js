@@ -27,7 +27,7 @@ class School {
   }
   static pickSubstituteTeacher(substituteTeachers) {
     this._substituteTeachers = [""];
-    Math.floor(substituteTeachers.length * Math.random());
+    const Index = Math.floor(substituteTeachers.length * Math.random());
     substituteTeachers[Index];
   }
 }
@@ -68,6 +68,20 @@ class MiddleSchool extends School {
   }
   get averageMiddleTestScores() {
     return this._averageMiddleTestScores;
+  }
+}
+
+class SchoolCatalog {
+  constructor(schoolList) {
+    this._schoolList = [schoolList];
+  }
+
+  get schoolList() {
+    return this._schoolList;
+  }
+
+  set schoolList(newSchoolList) {
+    this._schoolList.push(newSchoolList);
   }
 }
 
