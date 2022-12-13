@@ -8,6 +8,7 @@ const {
 
 const encodeMessage = (str) => {
   // Use the encryptor functions here.
+  return reverseCipher(symbolCipher(caesarCipher(str, 6)));
 };
 
 const decodeMessage = (str) => {
