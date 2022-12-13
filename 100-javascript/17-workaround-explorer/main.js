@@ -1,10 +1,8 @@
 // TODO: Add your import statements here.
 
-import { getRoles, getCompanies } from "./workaround-explorer-salary-data.js";
-
 // TODO: Get the companies and roles using the salaryData module.
-const companies = getCompanies();
-const roles = getRoles();
+const companies = [];
+const roles = [];
 
 // Create input buttons for every company and role represented in the data.
 renderInputButtons(companies, "company");
