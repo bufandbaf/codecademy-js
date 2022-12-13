@@ -57,3 +57,7 @@ const reverseCipher = (sentence) => {
   }
   return words.join(" ");
 };
+
+module.exports.caesarCipher = caesarCipher;
+module.exports.symbolCipher = symbolCipher;
+module.exports.reverseCipher = reverseCipher;
