@@ -23,3 +23,19 @@ if (true) {
     const a = true;
     let b = true;
 }
+
+enum Colour {
+    Blue,
+    Red,
+    Green,
+}
+
+const Barva = { Red: 'RED', Blue: 'BLUE', Green: 'Green'};
+
+const carpetColour: Colour = Colour.Blue;
+let wallColour = Colour.Green;
+wallColour = 'blbost';
+
+
+let barva = Barva.Blue;
+barva = 'blbost';
