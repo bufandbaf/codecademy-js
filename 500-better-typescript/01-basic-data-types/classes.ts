@@ -77,3 +77,5 @@ const library1 = new Library("Červenáčkova", { name: "Michal" });
 
 library1.addBook(book1);
 library1.addBook(book2);
+
+console.log(library1);
