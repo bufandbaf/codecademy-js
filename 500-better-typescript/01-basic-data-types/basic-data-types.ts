@@ -39,3 +39,9 @@ wallColour = 'blbost';
 
 let barva = Barva.Blue;
 barva = 'blbost';
+
+function sendEmail(): void {
+    console.log('email sent');
+    if (1 === 1) return true;
+    return 'bla bla bla';
+}
