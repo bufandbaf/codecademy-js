@@ -35,17 +35,6 @@ class Book implements IBook {
   }
 }
 
-const book1 = new Book({
-  author: { name: "Saga" },
-  title: "Sláma i hedvábí",
-  genre: Genre.Horror,
-});
-const book2 = new Book({
-  author: { name: "Rowling" },
-  title: "Harry Potter and the Philosopher´s Stone",
-});
-
-book1.update({ genre: Genre.Drama, type: Booktype.Paperback });
 
 class Library implements ILibrary {
   constructor(name: string, owner: IPerson) {
@@ -73,9 +62,18 @@ class Library implements ILibrary {
   }
 }
 
-const library1 = new Library("Červenáčkova", { name: "Michal" });
+const library1 = new Library('Červenáčkova', {name: 'Michal'});
+
+const book1 = new Book({ author: { name: "Saga" }, title: 'Sláma i hedvábí', genre: Genre.Horror, pages: 220});
+const book2 = new Book({ author: { name: "Rowling" }, title: 'Harry Potter and the Philosopher´s Stone', pages:345});
+const book3 = new Book({ author: { name: "Carter" }, title: 'Carter´s book', pages:219});
 
 library1.addBook(book1);
 library1.addBook(book2);
+library1.addBook(book3);
 
-console.log(library1);
+console.clear();
+console.log(library1.sumTotalPages());
+
+library1.removeBook(book1.title);
+console.log(library1.sumTotalPages());

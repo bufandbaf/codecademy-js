@@ -22,16 +22,6 @@ var Book = /** @class */ (function () {
     };
     return Book;
 }());
-var book1 = new Book({
-    author: { name: "Saga" },
-    title: "Sláma i hedvábí",
-    genre: interfaces_1.Genre.Horror
-});
-var book2 = new Book({
-    author: { name: "Rowling" },
-    title: "Harry Potter and the Philosopher´s Stone"
-});
-book1.update({ genre: interfaces_1.Genre.Drama, type: interfaces_1.Booktype.Paperback });
 var Library = /** @class */ (function () {
     function Library(name, owner) {
         this.name = name;
@@ -57,7 +47,14 @@ var Library = /** @class */ (function () {
     };
     return Library;
 }());
-var library1 = new Library("Červenáčkova", { name: "Michal" });
+var library1 = new Library('Červenáčkova', { name: 'Michal' });
+var book1 = new Book({ author: { name: "Saga" }, title: 'Sláma i hedvábí', genre: interfaces_1.Genre.Horror, pages: 220 });
+var book2 = new Book({ author: { name: "Rowling" }, title: 'Harry Potter and the Philosopher´s Stone', pages: 345 });
+var book3 = new Book({ author: { name: "Carter" }, title: 'Carter´s book', pages: 219 });
 library1.addBook(book1);
 library1.addBook(book2);
-console.log(library1);
+library1.addBook(book3);
+console.clear();
+console.log(library1.sumTotalPages());
+library1.removeBook(book1.title);
+console.log(library1.sumTotalPages());
