@@ -1,6 +1,6 @@
 "use strict";
 exports.__esModule = true;
-var interfaces_1 = require("./interfaces");
+var my_books_1 = require("./my-books");
 var Book = /** @class */ (function () {
     function Book(book) {
         var _a, _b, _c, _d, _e;
@@ -47,14 +47,13 @@ var Library = /** @class */ (function () {
     };
     return Library;
 }());
-var library1 = new Library('Červenáčkova', { name: 'Michal' });
-var book1 = new Book({ author: { name: "Saga" }, title: 'Sláma i hedvábí', genre: interfaces_1.Genre.Horror, pages: 220 });
-var book2 = new Book({ author: { name: "Rowling" }, title: 'Harry Potter and the Philosopher´s Stone', pages: 345 });
-var book3 = new Book({ author: { name: "Carter" }, title: 'Carter´s book', pages: 219 });
-library1.addBook(book1);
-library1.addBook(book2);
-library1.addBook(book3);
+var library1 = new Library("Červenáčkova", { name: "Michal" });
+for (var _i = 0, myBooks_1 = my_books_1.myBooks; _i < myBooks_1.length; _i++) {
+    var myBook = myBooks_1[_i];
+    var book = new Book(myBook);
+    library1.addBook(book);
+}
 console.clear();
 console.log(library1.sumTotalPages());
-library1.removeBook(book1.title);
+library1.removeBook(my_books_1.myBooks[1].title);
 console.log(library1.sumTotalPages());

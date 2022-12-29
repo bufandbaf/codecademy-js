@@ -8,6 +8,7 @@ import {
   IPerson,
   Language,
 } from "./interfaces";
+import { myBooks } from "./my-books";
 
 class Book implements IBook {
   constructor(book: IBookCreate) {
@@ -35,7 +36,6 @@ class Book implements IBook {
   }
 }
 
-
 class Library implements ILibrary {
   constructor(name: string, owner: IPerson) {
     this.name = name;
@@ -47,33 +47,31 @@ class Library implements ILibrary {
   owner: IPerson;
   addBook(book: Book) {
     const idx = this.books.findIndex((b) => b.title === book.title);
-    if(idx >= 0) throw new Error(`Book "${book.title}" already exists in this library.`);
+    if (idx >= 0)
+      throw new Error(`Book "${book.title}" already exists in this library.`);
     this.books.push(book);
   }
   removeBook(title: string) {
     const idx = this.books.findIndex((book) => book.title === title);
     if (idx >= 0) this.books.splice(idx, 1);
   }
-  countBooks(){
+  countBooks() {
     return this.books.length;
   }
-  sumTotalPages(){
-    return this.books.reduce((acc, book) => acc + (book.pages ?? 0), 0)
+  sumTotalPages() {
+    return this.books.reduce((acc, book) => acc + (book.pages ?? 0), 0);
   }
 }
 
-const library1 = new Library('Červenáčkova', {name: 'Michal'});
+const library1 = new Library("Červenáčkova", { name: "Michal" });
 
-const book1 = new Book({ author: { name: "Saga" }, title: 'Sláma i hedvábí', genre: Genre.Horror, pages: 220});
-const book2 = new Book({ author: { name: "Rowling" }, title: 'Harry Potter and the Philosopher´s Stone', pages:345});
-const book3 = new Book({ author: { name: "Carter" }, title: 'Carter´s book', pages:219});
-
-library1.addBook(book1);
-library1.addBook(book2);
-library1.addBook(book3);
+for (const myBook of myBooks) {
+  const book = new Book(myBook);
+  library1.addBook(book);
+}
 
 console.clear();
 console.log(library1.sumTotalPages());
 
-library1.removeBook(book1.title);
+library1.removeBook(myBooks[1].title);
 console.log(library1.sumTotalPages());
