@@ -1,5 +1,6 @@
-import restaurants from './restaurants';
+import {restaurants} from './restaurants';
 
+const a: string = "neco";
 const dollarSigns = '$$';
 const deliveryTimeMax = 90;
 const maxDistance = 10;

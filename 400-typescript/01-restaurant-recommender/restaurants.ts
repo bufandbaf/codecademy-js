@@ -1,4 +1,9 @@
-export default [
+
+export function capital(input: string){
+  return input.toUpperCase();
+}
+
+export const restaurants = [
     {
       name: 'Silver Rice Sushi 🍣',
       priceBracket: '2',
@@ -41,3 +46,6 @@ export default [
     },
   ];
   
+  export default {
+    capital, restaurants
+  }
